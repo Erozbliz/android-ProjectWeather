@@ -47,7 +47,7 @@ android {
 
     signingConfigs {
         // TODO : I should use another file to store all keys in the debugging version
-        debug {
+        /*debug {
             try {
                 keyAlias keystoreProperties['keyAlias']
                 keyPassword keystoreProperties['keyPassword']
@@ -56,7 +56,7 @@ android {
             } catch (ex) {
                 throw new InvalidUserCodeException("You should define keyAlias, keyPassword, storePassword and storeFile in keystore.properties.")
             }
-        }
+        }*/
 
         release {
             try {
@@ -71,14 +71,14 @@ android {
     }
 
     buildTypes {
-        debug {
+        /*debug {
             minifyEnabled true
             // Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/build-in-shrinker
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
             signingConfig signingConfigs.debug
-        }
+        }*/
         release {
             minifyEnabled true
             useProguard true
